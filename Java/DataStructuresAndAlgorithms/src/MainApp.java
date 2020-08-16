@@ -5,6 +5,7 @@ public class MainApp {
 	public static void main(String[] args) {
 
 		// Linked List
+		System.out.println("Create new LinkedList\n");
 		LinkedList list = new LinkedList();
 		
 		if (list.IsEmpty())
@@ -27,7 +28,30 @@ public class MainApp {
 		
 		list.Print();
 		
+		// Doubly Linked List
+		System.out.println("\nCreate new DoublyLinkedList\n");
+		DoublyLinkedList doubleList = new DoublyLinkedList();
+		
+		if (doubleList.IsEmpty())
+			System.out.println("List is empty initially");
+		
+		doubleList.Append(10);
+		doubleList.Prepend(5);
+		doubleList.Append(10);
+		doubleList.Append(15);
+		doubleList.Append(30);
+		doubleList.Append(25);
+		doubleList.Append(5);
+		
+		doubleList.Remove(10);
+		System.out.printf("Remove (Out of Range - Value Expected: -1): %d\n", list.RemoveAt(5));
+		System.out.printf("Remove (Index 3 - Value Expected: 30): %d\n", doubleList.RemoveAt(3));
+
+		doubleList.Print();
+		doubleList.PrintReverse();
+		
 		// Stack
+		System.out.println("\nCreate new Stack\n");
 		Stack stack = new Stack();
 		
 		if (stack.IsEmpty())
