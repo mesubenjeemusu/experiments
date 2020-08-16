@@ -70,6 +70,22 @@ public class MainApp {
 		System.out.printf("Top: %d\n", stack.Top());
 		
 		stack.Print();
+		
+		// Binary Tree
+		BinaryTree bTree = new BinaryTree();
+		
+		bTree.insert(5);
+		bTree.insert(3);
+		bTree.insert(4);
+		bTree.insert(10);
+		bTree.insert(13);
+		bTree.insert(27);
+		
+		
+		bTree.print(TraversalType.PREORDER);
+		bTree.print(TraversalType.POSTORDER);
+		bTree.print(TraversalType.INORDER);
+		bTree.print(TraversalType.BYLEVEL);
 	}
 
 }
