@@ -86,6 +86,28 @@ public class MainApp {
 		bTree.print(TraversalType.POSTORDER);
 		bTree.print(TraversalType.INORDER);
 		bTree.print(TraversalType.BYLEVEL);
+		
+		// BST
+		BinarySearchTree bst = new BinarySearchTree();
+		
+		bst.insert(3);
+		bst.insert(5);
+		bst.insert(4);
+		bst.insert(2);
+		bst.insert(1);
+		
+		bst.print(TraversalType.PREORDER);
+		
+		int arraySorted[] = { 1, 2, 3, 4, 5 };
+		int arrayUnsorted[] = { 3, 2, 4, 1, 5 };
+		
+		bst = new BinarySearchTree(arraySorted, true);
+		bst.print(TraversalType.PREORDER);
+		
+		bst = new BinarySearchTree(arrayUnsorted);
+		bst.print(TraversalType.PREORDER);
+		
+		
 	}
 
 }
